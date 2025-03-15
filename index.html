@@ -1,3 +1,5 @@
+
+                  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
     <title>My Personal Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -14,65 +17,41 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="container mt-5 text-center">
-    <h1>Welcome to My Website</h1>
-    <p>Learn more about me:</p>
-    <a href="about.html" class="btn btn-primary">About Me</a>
-    <a href="skills.html" class="btn btn-success">My Skills</a>
-    <a href="education.html" class="btn btn-info">Education</a>
-    <a href="contact.html" class="btn btn-warning">Contact Me</a>
-</div>
-
-
-
-                    <!-- Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        More
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Projects</a></li>
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- Search Bar -->
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-
-            <!-- Dark Mode Toggle -->
-            <button id="darkModeToggle" class="btn btn-warning ms-3">🌙 Dark Mode</button>
-        </div>
-    </div>
-</nav>
-
-<script>
-    // Dark Mode Toggle Functionality
-    const toggleButton = document.getElementById("darkModeToggle");
-    toggleButton.addEventListener("click", function() {
-        document.body.classList.toggle("dark-mode");
-    });
-
-    // Add dark mode styles
-    const style = document.createElement("style");
-    style.innerHTML = `
-        .dark-mode {
-            background-color: black;
-            color: red;
-        }
-        .dark-mode .navbar {
-            background-color: #333;
-        }
-    `;
-    document.head.appendChild(style);
-</script>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Projects</a></li>
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                    </li>
                 </ul>
+
+                <!-- Search Bar -->
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">
+        <i class="bi bi-search"></i> <!-- Bootstrap Search Icon -->
+    </button>
+</form>
+
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle" class="btn btn-warning ms-3">🌙 Dark Mode</button>
             </div>
         </div>
     </nav>
+
+    <div class="container mt-5 text-center">
+        <h1>Welcome to My Website</h1>
+        <p>Learn more about me:</p>
+        <a href="about.html" class="btn btn-primary">About Me</a>
+        <a href="skills.html" class="btn btn-success">My Skills</a>
+        <a href="education.html" class="btn btn-info">Education</a>
+        <a href="contact.html" class="btn btn-warning">Contact Me</a>
+    </div>
 
     <header class="text-center my-4">
         <img src="IMG_20250303_130155.jpg" alt="Profile Image" class="square" width="350">
@@ -81,44 +60,67 @@
     </header>
 
     <section id="readme" class="container mt-5">
-    <h1>Personal Profile Website</h1>
-    <p>A <strong>responsive and interactive</strong> personal profile website built with <strong>HTML, CSS, Bootstrap, and JavaScript</strong>. It includes a <strong>dark mode toggle, dropdown menu, and search bar</strong> for enhanced user experience.</p>
- 
-    <h2>🌟 Features</h2>
-    <ul>
-        <li>✅ <strong>Responsive Navbar</strong> – Stays fixed at the top</li>
-        <li>✅ <strong>Dropdown Menu</strong> – Organized navigation</li>
-        <li>✅ <strong>Search Bar</strong> – Quick content search</li>
-        <li>✅ <strong>Dark Mode Toggle</strong> – Switch between light & dark themes</li>
-        <li>✅ <strong>Bootstrap 5 & Custom Styling</strong></li>
-    </ul>
- 
-    <h2>🚀 Installation & Usage</h2>
-    <p>1. Clone the repository:</p>
-    
-git clone https://github.com/Bida24-308/profile-website.git</code></pre>
-    <p>2. Open <code>index.html</code> in a browser.</p>
-    <p>3. Customize content & styles in <code>style.css</code> and <code>index.html</code>.</p>
- 
-    <h2>📌 Live Demo</h2>
-    <p><a href="#">View Website</a> (Replace with actual link if hosted)</p>
- 
-    <h2>🛠️ Technologies Used</h2>
-    <ul>
-        <li>HTML5 – Structure</li>
-        <li>CSS3 & Bootstrap 5 – Styling & responsiveness</li>
-        <li>JavaScript – Dark mode toggle</li>
-    </ul>
- 
-    <h2>📜 License</h2>
-    <p>Feel free to <strong>use & customize</strong> this project!</p>
-</section>
- 
+        <h1>Personal Profile Website</h1>
+        <p>A <strong>responsive and interactive</strong> personal profile website built with <strong>HTML, CSS, Bootstrap, and JavaScript</strong>. It includes a <strong>dark mode toggle, dropdown menu, and search bar</strong> for enhanced user experience.</p>
+
+        <h2>🌟 Features</h2>
+        <ul>
+            <li>✅ <strong>Responsive Navbar</strong> – Stays fixed at the top</li>
+            <li>✅ <strong>Dropdown Menu</strong> – Organized navigation</li>
+            <li>✅ <strong>Search Bar</strong> – Quick content search</li>
+            <li>✅ <strong>Dark Mode Toggle</strong> – Switch between light & dark themes</li>
+            <li>✅ <strong>Bootstrap 5 & Custom Styling</strong></li>
+        </ul>
+
+        <h2>🚀 Installation & Usage</h2>
+        <p>1. Clone the repository:</p>
+        <pre><code>git clone https://github.com/Bida24-308/profile-website.git</code></pre>
+        <p>2. Open <code>index.html</code> in a browser.</p>
+        <p>3. Customize content & styles in <code>style.css</code> and <code>index.html</code>.</p>
+
+        <h2>📌 Live Demo</h2>
+        <p><a href="#">View Website</a> (Replace with actual link if hosted)</p>
+
+        <h2>🛠️ Technologies Used</h2>
+        <ul>
+            <li>HTML5 – Structure</li>
+            <li>CSS3 & Bootstrap 5 – Styling & responsiveness</li>
+            <li>JavaScript – Dark mode toggle</li>
+        </ul>
+
+        <h2>📜 License</h2>
+        <p>Feel free to <strong>use & customize</strong> this project!</p>
+    </section>
+
     <footer class="text-center bg-dark text-white py-3">
         <p>&copy; 2025 Theo Montgomery. All rights reserved.</p>
     </footer>
-    
+
+    <script>
+        // Dark Mode Toggle Functionality
+        const toggleButton = document.getElementById("darkModeToggle");
+        toggleButton.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        // Add dark mode styles
+        const style = document.createElement("style");
+        style.innerHTML = `
+            .dark-mode {
+                background-color: black;
+                color: red;
+            }
+            .dark-mode .navbar {
+                background-color: #333;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+    
+
   
