@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -7,10 +8,34 @@ h2 {
     color: #007bff;
 }
 
+/* Glowing Navbar */
 .navbar {
     padding: 15px;
+    position: relative;
+    background: #111; /* Dark base to enhance glow effect */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
 }
 
+/* Navbar Glow Effect without affecting text */
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.3);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Header Styling */
 header {
     text-align: center;
     margin-top: 20px;
@@ -20,6 +45,7 @@ header img {
     border: 4px solid #007bff;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
     background: white;
@@ -27,6 +53,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
     margin-top: 20px;
     text-align: center;
@@ -35,11 +62,13 @@ footer {
     padding: 10px;
 }
 
+/* Google Search Box */
 .gcse-search {
     width: 100%;
     margin-top: 10px;
 }
 
+/* Glowing Button */
 .button {
     border: none;
     background: #0071FF;
@@ -51,8 +80,10 @@ footer {
     font-weight: 500;
     cursor: pointer;
     transition: 150ms ease;
+    box-shadow: 0 0 10px rgba(0, 113, 255, 0.8), 0 0 20px rgba(0, 113, 255, 0.6);
 }
 
+/* Loading Animation */
 .loading {
     height: 50px;
     width: 50px;
@@ -67,6 +98,7 @@ footer {
     animation: 2s loading ease-in-out infinite;
 }
 
+/* Spinning & Glowing Orb Animation */
 @keyframes spin {
     0% {
         transform: rotate(0deg) scale(1);
@@ -103,18 +135,53 @@ footer {
             0 0 40px rgba(255, 0, 0, 0.6),
             0 0 60px rgba(255, 0, 0, 0.4);
     }
+}
 
-.element {
+/* Moving Glowing Orbs */
+@keyframes moveOrb {
+    0% { transform: translateX(0) translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateX(100px) translateY(50px) rotate(180deg) scale(1.2); }
+    100% { transform: translateX(0) translateY(0) rotate(360deg) scale(1); }
+}
+
+.orb {
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, #ff0000, #0000ff);
     border-radius: 50%;
-    animation-name: spin;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
+    position: absolute;
+    animation: moveOrb 5s ease-in-out infinite alternate;
 }
+
+.orb1 {
+    background: radial-gradient(circle, red, blue);
+    top: 50%;
+    left: 30%;
+}
+
+.orb2 {
+    background: radial-gradient(circle, cyan, magenta);
+    top: 40%;
+    left: 60%;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: black;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.dark-mode section {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .button {
+    background: #0ff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
